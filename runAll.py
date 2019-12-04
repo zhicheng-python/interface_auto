@@ -32,7 +32,7 @@ class RunAll:
 
         with open(do_path.report_path, "wb") as f:
             runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f, tester=do_read_yaml.read_config("report", "tester"),
-                                                      title=do_read_yaml.read_config("report", "title"),description="hello111111111111111：")
+                                                      title=do_read_yaml.read_config("report", "title"),description="详情如下：：")
             runner.run(suite)
 
 
