@@ -1,0 +1,39 @@
+logging:
+  fmt: "%(name)s--%(asctime)s--%(levelname)s--[levelno:%(levelno)s]--%(message)s"
+  datefmt: "%Y/%m/%d-%H:%M:%S-%a"
+  log_name: "my_logger"
+  collect_level: "DEBUG"
+  output_level: "DEBUG"
+
+
+mysql:
+  config:  {"host":"api.lemonban.com",
+             "user":"future",
+             "password":"123456",
+             "db":"futureloan",
+             "charset":"utf8"}
+#  config: {"host":"api.lemonban.com",
+#           "user":"future",
+#           "password":"123456",
+#           "port":3306,
+#           "db":"futureloan",
+#           "charset":"utf8"}
+  sql: "SELECT * FROM member WHERE mobile_phone = %s"
+
+  loan_id_sql: "select id from loan order by id desc limit 0,1"
+
+
+excel:
+  sheet_name: register
+  sheet_name_invest: invest
+  pass_result: PASS
+  fail_result: FAIL
+
+requests:
+  headers: {"X-Lemonban-Media-Type":"lemonban.v2","Content-Type":"application/json","User-Agent": "Mozilla/5.0 KeYou"}
+  url: "http://api.lemonban.com/futureloan"
+
+
+
+
+
